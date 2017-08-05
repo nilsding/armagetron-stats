@@ -1,0 +1,8 @@
+extends layouts/application
+
+block body
+  h1 About this site
+  p
+    | This site is generated with
+    a(href="https://github.com/nilsding/armagetron-stats") armagetron-stats
+    | .

@@ -1,0 +1,70 @@
+extends layouts/application
+
+block body
+  h1 Leaderboard
+
+  .row
+    .col-sm-3
+      h2 Highscores
+      table.table
+        thead
+          tr
+            th
+            th Points
+            th Name
+        tbody
+          - foreach(i, record; highscores.records)
+            - auto num = i + 1;
+            tr
+              td= num
+              td= record.points
+              td= record.name
+
+    .col-sm-3
+      h2 Ladder
+      table.table
+        thead
+          tr
+            th
+            th Points
+            th Name
+        tbody
+          - foreach(i, record; ladder.records)
+            - auto num = i + 1;
+            tr
+              td= num
+              td= record.points
+              td= record.name
+
+    .col-sm-3
+      h2 Won matches
+      table.table
+        thead
+          tr
+            th
+            th Points
+            th Name
+        tbody
+          - foreach(i, record; wonMatches.records)
+            - auto num = i + 1;
+            tr
+              td= num
+              td= record.points
+              td= record.name
+
+    .col-sm-3
+      h2 Won rounds
+      table.table
+        thead
+          tr
+            th
+            th Points
+            th Name
+        tbody
+          - foreach(i, record; wonRounds.records)
+            - auto num = i + 1;
+            tr
+              td= num
+              td= record.points
+              td= record.name
+

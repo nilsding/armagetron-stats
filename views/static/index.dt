@@ -1,0 +1,12 @@
+extends layouts/application
+
+block body
+  - import vibe.textfilter.markdown;
+  != filterMarkdown(appSettings.indexText)
+  h2 Currently online
+  - if (onlinePlayers.length == 0)
+    p Nobody is online right now.  Start playing!
+  - else
+    ul
+      - foreach (player; onlinePlayers)
+        li= player

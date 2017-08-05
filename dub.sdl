@@ -1,0 +1,10 @@
+name "armagetron-stats"
+description "Display statistics of your Armagetron server"
+authors "Georg Gadinger"
+copyright "Copyright © 2017, Georg Gadinger"
+license "BSD 2-clause"
+
+stringImportPaths "./views" "."
+
+dependency "vibe-d" version="~>0.7.30"
+dependency "sdlang-d" version="~>0.10.1"

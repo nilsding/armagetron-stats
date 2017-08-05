@@ -1,0 +1,4 @@
+hr
+small.text-muted
+  | powered by
+  a(href="https://github.com/nilsding/armagetron-stats") armagetron-stats

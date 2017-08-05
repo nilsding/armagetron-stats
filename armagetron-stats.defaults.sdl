@@ -1,0 +1,28 @@
+// Config for armagetron-stats
+
+// The name to display in the navbar and title
+name "armagetron-stats"
+
+// This is the Markdown formatted text that is displayed on the index route.
+index-text `# armagetron-stats
+
+Welcome to this site running armagetron-stats.
+
+To change the contents of this page, edit the <code>armagetron-stats.sdl</code>
+file.  You might want to add instructions on how to connect to your server
+here.
+`
+
+// armagetronad-related settings
+armagetronad {
+  // Path to the aad var dir
+  var-dir "/var/games/armagetronad/var"
+}
+
+// HTTP server settings
+http {
+  // The addresses to bind to.
+  bind "127.0.0.1" "::1"
+  // The port to bind to.
+  port 8080
+}

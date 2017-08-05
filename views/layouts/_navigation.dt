@@ -1,0 +1,9 @@
+nav.navbar.sticky-top.navbar-toggleable-sm.navbar-light.bg-faded
+  .container
+    button.navbar-toggler.navbar-toggler-right(type="button", data-toggle="collapse", data-target="#as-navbar-main", aria-controls="as-navbar-main", aria-expanded="false", aria-label="Toggle navigation")
+      span.navbar-toggler-icon
+    a.navbar-brand(href="/")= appSettings.name
+    #as-navbar-main.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item
+          a.nav-link(href="/leaderboard") Leaderboard
