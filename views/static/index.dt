@@ -4,9 +4,29 @@ block body
   - import vibe.textfilter.markdown;
   != filterMarkdown(appSettings.indexText)
   h2 Currently online
-  - if (onlinePlayers.length == 0)
-    p Nobody is online right now.  Start playing!
+  - if (onlinePlayers.players.length == 0)
+    - if (onlinePlayers.rawPlayers == "Nobody online.")
+      p Nobody is online right now.  Start playing!
+    - else
+      p= onlinePlayers.rawPlayers
   - else
-    ul
-      - foreach (player; onlinePlayers)
-        li= player
+    table.table.table-responsive
+      thead
+        tr
+          th Player
+          th Alive
+          th Score
+          th Ping
+          th Member of Team
+      tbody
+        - foreach (player; onlinePlayers.players)
+          tr
+            td= player.name
+            td
+              - if (player.alive)
+                span.text-success Yes
+              - else
+                span.text-danger No
+            td= player.score
+            td= player.ping
+            td= player.team
